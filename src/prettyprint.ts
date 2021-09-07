@@ -76,7 +76,11 @@ export function format(src: string, indentation: number = 4, useSpaces: boolean 
             if (!closeTagSameLine && attrNewLines) {
                 pretty.push('\n' + getIndent(indent));
             }
-            pretty.push('>');
+            if (!selfClosing.hasOwnProperty(element.name)) {
+                pretty.push('>');
+            } else {
+                pretty.push(' />');
+            }
             indent++;
             let ctx = {
                 inlineTextNode: false,

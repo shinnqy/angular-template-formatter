@@ -9,7 +9,7 @@
         "lib": [
             "es6"
         ],
-        "sourceMap": true,
+        "sourceMap": false,
         "rootDir": "."
     },
     "exclude": [
